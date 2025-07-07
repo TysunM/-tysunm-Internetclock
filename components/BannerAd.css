@@ -1,0 +1,405 @@
+/* BannerAd - Optimized CSS */
+.banner-ad {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  will-change: transform;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-ad:hover {
+  transform: scale(1.02);
+}
+
+.banner-close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.banner-close:hover {
+  opacity: 1;
+}
+
+/* Small Banner (320x50) */
+.banner-content-small {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  width: 100%;
+}
+
+.banner-icon {
+  font-size: 18px;
+}
+
+.banner-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.banner-title {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner-subtitle {
+  font-size: 10px;
+  opacity: 0.9;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner-cta {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.banner-cta:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Large Banner (728x90) */
+.banner-content-large {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.banner-icon-large {
+  font-size: 32px;
+}
+
+.banner-text-large {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.banner-title-large {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.banner-subtitle-large {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.2;
+}
+
+.banner-cta-large {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.banner-cta-large:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* Skyscraper Banner (120x600) */
+.banner-content-skyscraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 8px;
+  height: 100%;
+  text-align: center;
+  gap: 12px;
+}
+
+.skyscraper-icon {
+  font-size: 24px;
+}
+
+.skyscraper-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skyscraper-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.skyscraper-subtitle {
+  font-size: 12px;
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.3;
+}
+
+.skyscraper-cta {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.skyscraper-cta:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Medium Banner (300x250) */
+.banner-content-medium {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  gap: 12px;
+  height: 100%;
+}
+
+.medium-icon {
+  font-size: 40px;
+}
+
+.medium-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.medium-subtitle {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.3;
+}
+
+.medium-cta {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.medium-cta:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* Ad Indicator */
+.ad-indicator {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 1;
+}
+
+.ad-label {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-size: 8px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.ad-dots {
+  display: flex;
+  gap: 2px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.2s ease;
+}
+
+.dot.active {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Position-specific styles */
+.banner-ad.left,
+.banner-ad.right {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.banner-ad.left {
+  left: 10px;
+}
+
+.banner-ad.right {
+  right: 10px;
+}
+
+.banner-ad.bottom {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.banner-ad-placeholder {
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+.banner-ad-placeholder.left,
+.banner-ad-placeholder.right {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  width: 160px;
+  height: 600px;
+}
+
+.banner-ad-placeholder.left {
+  left: 10px;
+}
+
+.banner-ad-placeholder.right {
+  right: 10px;
+}
+
+.banner-ad-placeholder.bottom {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 728px;
+  height: 90px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner-ad.left,
+  .banner-ad.right,
+  .banner-ad-placeholder.left,
+  .banner-ad-placeholder.right {
+    display: none; /* Hide side ads on mobile */
+  }
+  
+  .banner-ad.bottom,
+  .banner-ad-placeholder.bottom {
+    width: calc(100vw - 20px);
+    max-width: 320px;
+    height: 50px;
+  }
+  
+  .banner-content-large {
+    padding: 0 12px;
+    gap: 8px;
+  }
+  
+  .banner-title-large {
+    font-size: 14px;
+  }
+  
+  .banner-subtitle-large {
+    font-size: 12px;
+  }
+  
+  .banner-cta-large {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Performance optimizations */
+.banner-ad * {
+  box-sizing: border-box;
+}
+
+.banner-ad button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Reduce animations on slower devices */
+@media (prefers-reduced-motion: reduce) {
+  .banner-ad,
+  .banner-ad *,
+  .banner-close,
+  .banner-cta,
+  .banner-cta-large,
+  .skyscraper-cta,
+  .medium-cta {
+    transition-duration: 0.01ms !important;
+  }
+}
