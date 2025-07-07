@@ -1,26 +1,35 @@
 {
-  "name": "-TysunM-internetclock",
+  "name": "internet-clock-optimized",
   "version": "1.0.0",
-  "description": "Your internet clock package description",
-  "main": "src/index.js",
+  "description": "High-performance internet clock with optimized bundle size",
+  "private": true,
   "scripts": {
-    "start": "node src/index.js",
-    "test": "npm test",
-    "build": "echo 'No build step needed' && exit 0"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "analyze": "cross-env ANALYZE=true next build",
+    "build:analyze": "npm run build && npx @next/bundle-analyzer"
   },
-  "files": [
-    "src/",
-    "README.md",
-    "LICENSE"
-  ],
-  "publishConfig": {
-    "@TysunM:registry": "https://npm.pkg.github.com"
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.0.0",
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-username/internetclock.git"
+  "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0"
   },
-  "keywords": ["clock", "time", "internet"],
-  "author": "TysunMic",
+  "keywords": ["clock", "time", "weather", "performance", "optimized"],
+  "author": "Internet Clock Team",
   "license": "MIT"
 }

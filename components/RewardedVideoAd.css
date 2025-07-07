@@ -1,0 +1,417 @@
+/* RewardedVideoAd - Optimized CSS */
+.rewarded-video-trigger {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 900;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.reward-button {
+  background: linear-gradient(135deg, #feca57, #ff9ff3);
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.reward-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.reward-icon {
+  font-size: 1.1rem;
+}
+
+.reward-text {
+  font-size: 0.85rem;
+}
+
+/* Video Modal */
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  animation: fadeIn 0.3s ease;
+}
+
+.video-container {
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 640px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.video-header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.video-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.video-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.video-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.video-content {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-placeholder {
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.play-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.video-placeholder h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+  opacity: 0.9;
+}
+
+.video-placeholder p {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.7;
+  line-height: 1.4;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.play-button {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.play-button:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #feca57, #ff9ff3);
+  border-radius: 3px;
+  transition: width 0.2s ease;
+}
+
+.time-display {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  min-width: 80px;
+  text-align: right;
+}
+
+.video-footer {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.reward-info {
+  margin-bottom: 1rem;
+}
+
+.reward-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #feca57;
+  margin-bottom: 0.25rem;
+}
+
+.reward-description {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.claim-button {
+  background: linear-gradient(135deg, #feca57, #ff9ff3);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.claim-button.enabled {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.claim-button.enabled:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(254, 202, 87, 0.3);
+}
+
+.countdown-overlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* Loading state */
+.video-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #feca57;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Reward notification */
+.reward-notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #feca57, #ff9ff3);
+  color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  z-index: 1200;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: bounceIn 0.5s ease;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.reward-celebration {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.reward-message {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.reward-value {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rewarded-video-trigger {
+    bottom: 80px;
+    right: 15px;
+  }
+  
+  .reward-button {
+    padding: 10px 14px;
+    font-size: 0.8rem;
+  }
+  
+  .video-container {
+    width: 95vw;
+    max-width: none;
+  }
+  
+  .video-header {
+    padding: 0.75rem;
+  }
+  
+  .video-title {
+    font-size: 0.9rem;
+  }
+  
+  .video-placeholder {
+    padding: 1.5rem;
+  }
+  
+  .play-icon {
+    font-size: 3rem;
+  }
+  
+  .video-controls {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+  
+  .play-button {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  
+  .reward-notification {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .reward-celebration {
+    font-size: 2.5rem;
+  }
+  
+  .reward-message {
+    font-size: 1.1rem;
+  }
+}
+
+/* Performance optimizations */
+.rewarded-video-trigger *,
+.video-modal * {
+  box-sizing: border-box;
+}
+
+.reward-button,
+.video-close,
+.play-button,
+.claim-button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Reduce animations on slower devices */
+@media (prefers-reduced-motion: reduce) {
+  .rewarded-video-trigger {
+    animation: none;
+  }
+  
+  .video-modal,
+  .reward-notification,
+  .loading-spinner,
+  .reward-button,
+  .play-button,
+  .claim-button {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,271 @@
+/* InterstitialAd - Optimized CSS */
+.interstitial-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.interstitial-content {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 400px;
+  text-align: center;
+  color: white;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.interstitial-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.interstitial-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.interstitial-header {
+  margin-bottom: 1.5rem;
+}
+
+.interstitial-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.interstitial-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.2;
+}
+
+.interstitial-subtitle {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.interstitial-body {
+  margin-bottom: 2rem;
+}
+
+.interstitial-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.interstitial-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.interstitial-features li {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.interstitial-features li::before {
+  content: '✓';
+  color: #4ade80;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.interstitial-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.interstitial-cta {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.interstitial-cta:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+.interstitial-secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 100px;
+}
+
+.interstitial-secondary:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.interstitial-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.countdown {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+
+.skip-option {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+}
+
+.skip-button {
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 0.75rem;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.skip-button:hover {
+  opacity: 0.8;
+}
+
+/* Theme variations */
+.interstitial-content.neon {
+  background: linear-gradient(135deg, #ff006e, #8338ec);
+}
+
+.interstitial-content.sunset {
+  background: linear-gradient(135deg, #ff9a9e, #fecfef);
+  color: #333;
+}
+
+.interstitial-content.forest {
+  background: linear-gradient(135deg, #134e5e, #71b280);
+}
+
+.interstitial-content.minimal {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .interstitial-content {
+    padding: 1.5rem;
+    width: 95vw;
+    max-width: 350px;
+  }
+  
+  .interstitial-title {
+    font-size: 1.25rem;
+  }
+  
+  .interstitial-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .interstitial-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .interstitial-cta,
+  .interstitial-secondary {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Performance optimizations */
+.interstitial-overlay * {
+  box-sizing: border-box;
+}
+
+.interstitial-overlay button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Reduce animations on slower devices */
+@media (prefers-reduced-motion: reduce) {
+  .interstitial-overlay,
+  .interstitial-content {
+    animation-duration: 0.01ms !important;
+  }
+  
+  .interstitial-close,
+  .interstitial-cta,
+  .interstitial-secondary {
+    transition-duration: 0.01ms !important;
+  }
+}
